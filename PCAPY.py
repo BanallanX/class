@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 #   import pcap library
-import pcopy
+import pcapy
 
 #   find and print devices 
 devices = pcapy.findolldevs
