@@ -6,15 +6,15 @@ import string
 
 host = "3.17.10.219"
 user = "student" 
-password = P@ssw0rd
+password = "P@ssw0rd"
 
-authToken = base64.encodestring('%$:%$' % (user, password)).replace('\n', '')
-print(authtoken)
+authToken = base64.encodestring('%s:%s' % (user, password)).replace('\n', '')
+print(authToken)
 
-request = httplib(host)
+request = httplib.HTTP(host)
 request.putrequest("Get", "/")
 request.putheader("host", host)
-request.putheader("Authorization", "Basic %$" % authToken)
+request.putheader("Authorization", "Basic %s" % authToken)
 request.endheaders()
 request.send("")
 
